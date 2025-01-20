@@ -14,4 +14,115 @@
 body {
   font-family: "Rubik", serif;
   background: var(--bgColor);
+  min-height: 100vh;
+}
+
+.Hero {
+  padding: 30px 30px;
+  height: 100%;
+}
+
+.Hero .nav-bar .nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar .nav-items .logo {
+  width: 150px;
+  height: 30px;
+}
+
+.nav-items .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar .nav-items .lists {
+  display: none;
+  background: #999;
+  /* width: 0%; */
+  padding: 20px 0px;
+  /* position: absolute;
+  left: 0; */
+}
+
+.nav-items .lists .list-item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
+  transition: all 0.2s ease;
+}
+.nav-items .lists .list-item:hover::after {
+  content: "";
+  width: 85%;
+  height: 1.5px;
+  background: #fe8c3e;
+}
+.nav-items .lists .list-item:hover {
+  cursor: pointer;
+}
+.lists .list-item a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-decoration: none;
+  color: #000000b7;
+  transition: all 0.2s ease;
+}
+.lists .list-item a img {
+  width: 15px;
+}
+.lists .list-item a:hover {
+  font-weight: 500;
+}
+
+.nav-items .icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.nav-items .icons .search {
+  width: 20px;
+  height: 20px;
+}
+.nav-items .icons .search img {
+  width: 100%;
+  height: 100%;
+}
+.nav-items .icons .menu {
+  width: 40px;
+  height: 40px;
+}
+.nav-items .icons .menu img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Responsiveness */
+@media screen and (min-width: 760px) {
+  .Hero {
+    padding: 50px 80px;
+  }
+
+  .nav-bar .nav-items .lists {
+    display: flex;
+    align-items: center;
+    background: none;
+  }
+
+  .nav-items .icons {
+    gap: 40px;
+  }
+  .nav-items .icons .search {
+    width: 25px;
+    height: 25px;
+  }
+  .nav-items .icons .menu {
+    width: 45px;
+    height: 45px;
+  }
 }
